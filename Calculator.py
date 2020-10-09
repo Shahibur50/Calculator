@@ -1,8 +1,16 @@
 '''
-Copyright (c) Shahibur Rahaman.
-Licensed under the MIT License.
+MIT License
+Copyright (c) 2020 Shahibur Rahaman
 '''
 
+print(
+'''
+Calculator version 2.9.10.20
+
+Copyright (c) Shahibur Rahaman
+Licensed under the MIT License.
+'''
+)
 
 import Operations
 import time
@@ -27,7 +35,7 @@ def main():
                 try:
                     choice = int(input("Enter your choice: [1, 2, 3, 4] "))
                     if choice > 4 or choice < 1:
-                        print("\nPlease enter your choice according to the given operation options!")
+                        print("\nPlease enter your choice according to the given operation options only!")
                         continue        
                 except ValueError:
                     print("\nPlease enter a numerical value only!")
@@ -35,10 +43,15 @@ def main():
                 else:
                     break
         
-        
-            x = float(input("\nEnter the first number: "))
-            y = float(input("Enter the second number: ")) 
-            
+            while True:
+                try:
+                    x = float(input("\nEnter the first number: "))
+                    y = float(input("Enter the second number: ")) 
+                except ValueError:
+                    print("\nPlease enter numerical values only!\n")
+                else:
+                    break
+
             add = Operations.Operation(x, y).addition()
             sub = Operations.Operation(x, y).subtraction()
             mul = Operations.Operation(x, y).multiplication()
@@ -46,7 +59,7 @@ def main():
 
             c = choice
 
-            print("")
+            print("\n-----------------------------")
             if c == 1:
                 print(f"{x} + {y} = {add}")
             elif c == 2:
@@ -55,7 +68,7 @@ def main():
                 print(f"{x} X {y} = {mul}")
             elif c == 4:
                 print(f"{x} / {y} = {div}")
-            print("")
+            print("-----------------------------\n")
 
         except KeyboardInterrupt:
                 print("\nExiting...")
