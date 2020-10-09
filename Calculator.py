@@ -1,12 +1,11 @@
+import Operations
+import time
+
+
 '''
 MIT License
 Copyright (c) 2020 Shahibur Rahaman
 '''
-
-
-import Operations
-import time
-
 
 def main():
     print(
