@@ -3,14 +3,6 @@ MIT License
 Copyright (c) 2020 Shahibur Rahaman
 '''
 
-print(
-'''
-Calculator version 2.9.10.20
-
-Copyright (c) Shahibur Rahaman
-Licensed under the MIT License.
-'''
-)
 
 import Operations
 import time
@@ -19,6 +11,11 @@ import time
 def main():
     print(
 """
+Calculator version 2.9.10.20
+
+Copyright (c) Shahibur Rahaman
+Licensed under the MIT License.
+
 |> Press (Ctrl + C) to exit the program.
 |> Choose your operation:
 
