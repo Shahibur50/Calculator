@@ -1,19 +1,20 @@
+"""
+MIT License
+Copyright (c) 2020 Shahibur Rahaman
+"""
+
 import Operations
 import time
 
 
-'''
-MIT License
-Copyright (c) 2020 Shahibur Rahaman
-'''
-
 def main():
     print(
-"""
+        """
 Calculator version 2.9.10.20
 
 Copyright (c) Shahibur Rahaman
 Licensed under the MIT License.
+
 
 |> Press (Ctrl + C) to exit the program.
 |> Choose your operation:
@@ -23,7 +24,9 @@ Licensed under the MIT License.
 3. Multiplication
 4. Division
 """
-)
+    )
+
+    choice = 0
 
     while True:
         try:
@@ -32,17 +35,17 @@ Licensed under the MIT License.
                     choice = int(input("Enter your choice: [1, 2, 3, 4] "))
                     if choice > 4 or choice < 1:
                         print("\nPlease enter your choice according to the given operation options only!")
-                        continue        
+                        continue
                 except ValueError:
                     print("\nPlease enter a numerical value only!")
                     continue
                 else:
                     break
-        
+
             while True:
                 try:
                     x = float(input("\nEnter the first number: "))
-                    y = float(input("Enter the second number: ")) 
+                    y = float(input("Enter the second number: "))
                 except ValueError:
                     print("\nPlease enter numerical values only!\n")
                 else:
@@ -55,7 +58,7 @@ Licensed under the MIT License.
 
             c = choice
 
-            print("\n-----------------------------")
+            print("\n--------------------------")
             if c == 1:
                 print(f"{x} + {y} = {add}")
             elif c == 2:
@@ -64,14 +67,13 @@ Licensed under the MIT License.
                 print(f"{x} X {y} = {mul}")
             elif c == 4:
                 print(f"{x} / {y} = {div}")
-            print("-----------------------------\n")
+            print("--------------------------\n")
 
         except KeyboardInterrupt:
-                print("\nExiting...")
-                time.sleep(1)
-                break
+            print("\nExiting...")
+            time.sleep(1)
+            break
 
 
 if __name__ == "__main__":
     main()
-    

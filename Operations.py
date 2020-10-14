@@ -1,7 +1,8 @@
-'''
+"""
 Copyright (c) Shahibur Rahaman.
 Licensed under the MIT License.
-'''
+"""
+
 
 class Operation:
     def __init__(self, x, y):
